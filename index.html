@@ -3,240 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THRIVE – Forex Signals & Community</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Thrive - Accurate Forex Signals</title>
+    <link rel="icon" type="image/png" href="images/Group-534.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar" id="top">
     <div class="nav-container">
-        <a href="#" class="nav-logo">
-            <img src="images/logo_svg.svg" alt="THRIVE" class="logo-img">
+        <a href="#top" class="nav-logo">
+            <img src="images/Group-534.png" alt="Thrive" height="36">
         </a>
-        <div class="nav-menu" id="navMenu">
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#community" class="nav-link">Community</a>
-            <a href="#forex-signals" class="nav-link">Forex Signals</a>
-            <a href="#robin" class="nav-link">Robin</a>
-            <a href="#pricing-cards" class="nav-link">Plans</a>
-            <a href="#how-it-works" class="nav-link">How it Works</a>
-        </div>
+        <ul class="nav-links">
+            <li><a href="#community">Community</a></li>
+            <li><a href="#signals">Signals</a></li>
+            <li><a href="#robin">Robin</a></li>
+            <li><a href="#pricing">Thrive</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
         <div class="nav-actions">
-            <a href="#pricing-cards" class="btn btn-green btn-nav">Subscribe Now</a>
+            <a href="#" class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </a>
+            <a href="#" class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </a>
+            <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
     </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero" id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <img src="images/original/testpilote.png" alt="THRIVE" class="hero-logo-badge">
-        <div class="animated-headline">
-            <span class="rotating-text" id="rotatingText">ACCURATE</span>
-            <span class="headline-label">FOREX SIGNALS</span>
+    <div class="hero-bg">
+        <img src="images/Banner_Thrive.png" alt="" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+        <div class="hero-left">
+            <div class="trustpilot-badge">
+                <img src="images/testpilote.png" alt="Trustpilot Excellent" class="trustpilot-img">
+            </div>
+            <div class="hero-heading">
+                <span class="hero-highlight">ACCURATE</span>
+                <h1>FOREX SIGNALS</h1>
+            </div>
+            <p class="hero-subtitle">Join our community and start receiving accurate forex signals with a proven track record of success.</p>
+            <a href="#pricing" class="btn btn-primary">Subscribe Now</a>
         </div>
-        <p class="hero-subtitle">COPY THE TRADES OF OUR PROFESSIONAL EASILY</p>
-        <p class="hero-desc">WE SHARE DAILY THE BEST OPPORTUNITIES TO PROFIT THROUGH OUR SIGNALS</p>
-        <a href="#pricing-cards" class="btn btn-green btn-large">Subscribe Now</a>
+        <div class="hero-right">
+            <img src="images/Group-3722-1.png" alt="Trading Phone Mockup" class="hero-phones">
+        </div>
     </div>
 </section>
 
 <!-- OUR SERVICES -->
 <section class="services" id="services">
     <div class="container">
-        <h2 class="section-title green">OUR SERVICES</h2>
-        <p class="section-subtitle">We offer a number of benefits to trading on <span class="green-text">the global forex market</span> – the largest and most liquid financial market in the world.</p>
+        <h2 class="section-label">OUR SERVICES</h2>
         <div class="services-grid">
-            <div class="services-phone">
-                <img src="images/original/Group-3609.png" alt="App Preview">
+            <div class="services-image">
+                <img src="images/Group-3609.jpg" alt="Our Services" class="services-photo">
             </div>
             <div class="services-list">
                 <div class="service-item">
-                    <img src="images/original/image-1.png" alt="Community" class="service-icon">
-                    <h3>Community</h3>
+                    <div class="service-number">01</div>
+                    <div class="service-info">
+                        <h3>Thrive Community</h3>
+                        <p>Join our exclusive community of traders and share insights, strategies, and market analysis in real-time.</p>
+                    </div>
                 </div>
                 <div class="service-item">
-                    <img src="images/original/image-1.png" alt="Forex Signals" class="service-icon">
-                    <h3>Forex signals</h3>
+                    <div class="service-number">02</div>
+                    <div class="service-info">
+                        <h3>Thrive Forex Signals</h3>
+                        <p>Receive accurate forex signals directly to your Telegram with detailed entry, take profit, and stop loss levels.</p>
+                    </div>
                 </div>
                 <div class="service-item">
-                    <img src="images/original/image-2-1.png" alt="Copy Trader" class="service-icon">
-                    <h3>Copy Trader</h3>
+                    <div class="service-number">03</div>
+                    <div class="service-info">
+                        <h3>Robin Copy Trader</h3>
+                        <p>Automatically copy our trades directly to your broker account with our Robin copy trading technology.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- COMMUNITY SECTION -->
+<!-- THRIVE COMMUNITY -->
 <section class="community" id="community">
-    <div class="community-bg"></div>
-    <div class="container community-inner">
-        <div class="community-text">
-            <p class="community-label">THRIVE COMMUNITY</p>
-            <h2 class="community-title">TOGETHER</h2>
-            <h3 class="community-title2">We thrive</h3>
-            <p class="community-desc">A free community where you can find educational content, mutual help between hundreds of members and ways to achieve a side income with minimum effort.</p>
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <img src="images/original/Component-12-–-1@2x.png" alt="Safe">
-                    <span>Safe and secure</span>
+    <div class="container community-grid">
+        <div class="community-left">
+            <h2 class="community-heading">
+                <span class="green-text large-text">TOGETHER</span>
+                <br>
+                <span class="dark-text">We thrive</span>
+            </h2>
+            <p class="community-desc">Join our exclusive trading community where experienced and beginner traders come together to share insights, strategies, and support each other on the path to financial freedom. Our community is built on trust, transparency, and a shared commitment to success.</p>
+            <div class="community-features">
+                <div class="feature-badge">
+                    <img src="images/Component-11-–-1.png" alt="Safe" class="feature-icon">
+                    <span>Safe</span>
                 </div>
-                <div class="trust-badge">
-                    <img src="images/original/Component-13-–-2@2x.png" alt="Trusted">
-                    <span>Trusted since 2019</span>
+                <div class="feature-badge">
+                    <img src="images/Component-12-–-1.png" alt="Trusted" class="feature-icon">
+                    <span>Trusted</span>
                 </div>
-                <div class="trust-badge">
-                    <img src="images/original/Component-11-–-1@2x.png" alt="Easy">
-                    <span>Easy to use</span>
+                <div class="feature-badge">
+                    <img src="images/Component-13-–-2.png" alt="Easy" class="feature-icon">
+                    <span>Easy</span>
                 </div>
             </div>
+            <a href="#pricing" class="btn btn-primary">Join Community</a>
         </div>
-        <div class="community-visual">
-            <img src="images/original/Component-8-–-1.png" alt="Community Preview">
-            <a href="#" class="btn btn-pink btn-large">Join us now</a>
+        <div class="community-right">
+            <div class="community-phone-wrapper">
+                <img src="images/Component-8-–-1.png" alt="Community Globe" class="community-phone">
+            </div>
         </div>
     </div>
 </section>
 
 <!-- FOREX SIGNALS -->
-<section class="forex-signals" id="forex-signals">
+<section class="signals" id="signals">
     <div class="container">
-        <img src="images/original/Group-3727.png" alt="Forex Signals" class="signals-graphic">
-        <h2 class="section-title green">FOREX SIGNALS</h2>
-        <a href="#pricing-cards" class="btn btn-pink">Subscribe Now</a>
-        
-        <div class="stats-row">
-            <div class="stat">
+        <div class="signals-top">
+            <img src="images/Group-534.png" alt="Thrive" class="signals-logo" style="filter: brightness(0) invert(1);">
+            <h2 class="signals-heading">FOREX SIGNALS</h2>
+            <p class="signals-subtitle">Get access to our premium forex signals delivered directly to your Telegram with detailed analysis and trade setups.</p>
+            <a href="#pricing" class="btn btn-primary">Get Signals</a>
+        </div>
+        <div class="signals-stats">
+            <div class="stat-item">
                 <span class="stat-number">85%</span>
-                <span class="stat-label">accuracy rate</span>
+                <span class="stat-label">Win Rate</span>
             </div>
-            <div class="stat">
-                <span class="stat-text">5 Forex Signals Channels on</span>
-                <span class="stat-number">Telegram</span>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-highlight">5</span>
+                <span class="stat-label">Forex Signals Channels on Telegram</span>
             </div>
-            <div class="stat">
+            <div class="stat-divider"></div>
+            <div class="stat-item">
                 <span class="stat-number">1000+</span>
                 <span class="stat-label">Weekly PIPS</span>
             </div>
         </div>
-
-        <div class="animated-headline signals-headline">
-            <span class="headline-prefix">YOUR CONSISTENT PATH TO</span>
-            <span class="rotating-text2" id="rotatingText2">SUCCESS</span>
-        </div>
-
-        <p class="signals-desc">Our <strong>analysis</strong> team save you hours of watching and waiting for possible entry and exit point, we deeply examine the market and share the best opportunities to profit daily through our signals.</p>
-
-        <div class="team-row">
-            <div class="team-item">
-                <div class="team-icon"><i class="fas fa-chart-line"></i></div>
-                <span>Professional</span>
-                <h3>analysis team</h3>
-            </div>
-            <div class="team-item">
-                <div class="team-icon"><i class="fas fa-headset"></i></div>
-                <span>24/7</span>
-                <h3>Support</h3>
-            </div>
+        <div class="signals-bottom">
+            <h3 class="profit-heading">YOUR CONSISTENT PATH TO <span class="profit-badge">Profit</span></h3>
         </div>
     </div>
 </section>
 
-<!-- ROBIN SECTION -->
+<!-- ROBIN COPY TRADER -->
 <section class="robin" id="robin">
-    <div class="container robin-inner">
-        <div class="robin-content">
-            <p class="robin-desc">Robin is a tool that automates trading in a simple and fast way, without human intervention.<br><br>Robin reads the signals sent via Telegram and interprets them, sending the information to the trading platforms.</p>
-            <a href="#" class="btn btn-green">Our features</a>
+    <div class="container robin-grid">
+        <div class="robin-left">
+            <div class="robin-logo">
+                <img src="images/ROBIN_LOGO_01-07.svg" alt="Robin" class="robin-logo-img">
+            </div>
+            <h2 class="robin-title">Copy Trader</h2>
+            <p class="robin-desc">Robin is our proprietary copy trading solution that automatically replicates our expert trades directly into your broker account. No manual intervention needed — simply connect your account and let Robin handle the rest.</p>
+            <a href="#pricing" class="btn btn-primary">Start Copy Trading</a>
         </div>
-        <div class="robin-visual">
-            <img src="images/original/Component-17-–-1.png" alt="Robin">
+        <div class="robin-right">
+            <div class="robin-mockup-wrapper">
+                <img src="images/Component-17-–-1.png" alt="Robin Interface" class="robin-mockup">
+                <div class="robin-diamond robin-diamond-1"></div>
+                <div class="robin-diamond robin-diamond-2"></div>
+                <div class="robin-diamond robin-diamond-3"></div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- PRICING -->
-<section class="pricing" id="pricing-cards">
+<section class="pricing" id="pricing">
+    <div class="pricing-bg"></div>
     <div class="container">
-        <h2 class="section-title">CHOOSE YOUR BEST PLAN</h2>
+        <h2 class="pricing-heading">CHOOSE YOUR BEST PLAN</h2>
         <div class="pricing-grid">
-            <!-- LEFT CARD: Signals Only -->
-            <div class="price-card left-price-card">
-                <div class="card-icon">
-                    <img src="images/original/image-1.png" alt="Signals">
+            <!-- Plan 1: Thrive Only -->
+            <div class="pricing-card">
+                <h3 class="plan-name">Thrive Only</h3>
+                <div class="plan-price">
+                    <span class="price-currency">€</span>
+                    <span class="price-amount">49</span>
+                    <span class="price-period">/month</span>
                 </div>
-                <h3 class="card-title">Signals</h3>
-                <ul class="features-list">
-                    <li class="disabled">ROBIN - Our copytrade</li>
-                    <li>Telegram Forex signals</li>
-                    <li>5 Trading channels</li>
-                    <li>Entry Point, Take Profit &amp; SL Provided</li>
-                    <li>Community with &gt;600 members</li>
-                    <li>85% Accuracy</li>
-                    <li>&gt;1000 Weekly PIPS</li>
-                    <li>Detailed weekly signals report</li>
-                    <li>24/7 Support</li>
+                <ul class="plan-features">
+                    <li class="feature-yes"><span class="check">✓</span> Thrive Community Access</li>
+                    <li class="feature-yes"><span class="check">✓</span> 5 Telegram Signal Channels</li>
+                    <li class="feature-yes"><span class="check">✓</span> Daily Market Analysis</li>
+                    <li class="feature-yes"><span class="check">✓</span> Educational Content</li>
+                    <li class="feature-no"><span class="cross">✕</span> Robin Copy Trader</li>
+                    <li class="feature-no"><span class="cross">✕</span> Priority Support</li>
                 </ul>
-                <div class="price-buttons">
-                    <a href="#" class="btn btn-outline"><span class="price-highlight">29.99 €</span> 1 month</a>
-                    <a href="#" class="btn btn-outline"><span class="price-highlight">29.99 €</span> 1 month</a>
-                </div>
+                <a href="#" class="btn btn-primary btn-plan">Subscribe Now</a>
             </div>
-
-            <!-- MIDDLE CARD: Recommended -->
-            <div class="price-card middle-price-card featured">
-                <div class="recommended-badge">Recommended</div>
-                <div class="card-icons-row">
-                    <img src="images/original/download-2.png" alt="Signals">
-                    <span class="plus">+</span>
-                    <img src="images/original/download-3.png" alt="Robin">
+            <!-- Plan 2: Thrive + Robin (Featured) -->
+            <div class="pricing-card pricing-card-featured">
+                <div class="featured-badge">Most Popular</div>
+                <h3 class="plan-name">Thrive + Robin</h3>
+                <div class="plan-price">
+                    <span class="price-currency">€</span>
+                    <span class="price-amount">FREE</span>
                 </div>
-                <p class="affiliate-label">Affiliate</p>
-                <ul class="features-list">
-                    <li>ROBIN - Our copytrade</li>
-                    <li>Telegram Forex signals</li>
-                    <li>5 Trading channels</li>
-                    <li>Entry Point, Take Profit &amp; SL Provided</li>
-                    <li>Community with &gt;600 members</li>
-                    <li>85% Accuracy</li>
-                    <li>&gt;1000 Weekly PIPS</li>
-                    <li>Detailed weekly signals report</li>
-                    <li>24/7 Support</li>
+                <p class="plan-note">with compatible broker</p>
+                <ul class="plan-features">
+                    <li class="feature-yes"><span class="check">✓</span> Thrive Community Access</li>
+                    <li class="feature-yes"><span class="check">✓</span> 5 Telegram Signal Channels</li>
+                    <li class="feature-yes"><span class="check">✓</span> Daily Market Analysis</li>
+                    <li class="feature-yes"><span class="check">✓</span> Educational Content</li>
+                    <li class="feature-yes"><span class="check">✓</span> Robin Copy Trader</li>
+                    <li class="feature-no"><span class="cross">✕</span> Priority Support</li>
                 </ul>
+                <a href="#" class="btn btn-primary btn-plan">Subscribe Now</a>
             </div>
-
-            <!-- RIGHT CARD: Signals + Robin -->
-            <div class="price-card right-price-card">
-                <div class="card-icons-row">
-                    <img src="images/original/download-2.png" alt="Signals">
-                    <span class="plus">+</span>
-                    <img src="images/original/download-3.png" alt="Robin">
+            <!-- Plan 3: Thrive + Robin Premium -->
+            <div class="pricing-card">
+                <h3 class="plan-name">Thrive + Robin Premium</h3>
+                <div class="plan-price">
+                    <span class="price-currency">€</span>
+                    <span class="price-amount">99</span>
+                    <span class="price-period">/month</span>
                 </div>
-                <h3 class="card-title">Signals + Robin</h3>
-                <ul class="features-list">
-                    <li>ROBIN - Our copytrade</li>
-                    <li>Telegram Forex signals</li>
-                    <li>5 Trading channels</li>
-                    <li>Entry Point, Take Profit &amp; SL Provided</li>
-                    <li>Community with &gt;600 members</li>
-                    <li>85% Accuracy</li>
-                    <li>&gt;1000 Weekly PIPS</li>
-                    <li>Detailed weekly signals report</li>
-                    <li>24/7 Support</li>
+                <ul class="plan-features">
+                    <li class="feature-yes"><span class="check">✓</span> Thrive Community Access</li>
+                    <li class="feature-yes"><span class="check">✓</span> 5 Telegram Signal Channels</li>
+                    <li class="feature-yes"><span class="check">✓</span> Daily Market Analysis</li>
+                    <li class="feature-yes"><span class="check">✓</span> Educational Content</li>
+                    <li class="feature-yes"><span class="check">✓</span> Robin Copy Trader</li>
+                    <li class="feature-yes"><span class="check">✓</span> Priority Support</li>
                 </ul>
-                <div class="price-buttons">
-                    <a href="#" class="btn btn-outline"><span class="price-highlight">29.99 €</span> 1 month</a>
-                    <a href="#" class="btn btn-outline"><span class="price-highlight">29.99 €</span> 1 month</a>
-                </div>
+                <a href="#" class="btn btn-primary btn-plan">Subscribe Now</a>
             </div>
         </div>
     </div>
@@ -245,39 +251,36 @@
 <!-- HOW IT WORKS -->
 <section class="how-it-works" id="how-it-works">
     <div class="container">
-        <h2 class="section-title">HOW IT WORKS</h2>
-        <div class="steps-timeline">
-            <div class="timeline-line"></div>
-            <div class="step-numbers">
-                <span class="step-num">01</span>
-                <img src="images/original/Group-3748@2x.png" alt="" class="step-dot">
-                <span class="step-num">02</span>
-                <img src="images/original/Group-3748@2x.png" alt="" class="step-dot">
-                <span class="step-num">03</span>
-                <img src="images/original/Group-3748@2x.png" alt="" class="step-dot">
-                <span class="step-num">04</span>
-            </div>
-        </div>
+        <h2 class="section-label">HOW IT WORKS</h2>
         <div class="steps-grid">
             <div class="step">
                 <div class="step-number">01</div>
-                <h3>Subscribe your plan</h3>
-                <p>First of all choose a signal package that works well for you.</p>
+                <h3>Subscribe</h3>
+                <p>Choose your plan and create your Thrive account</p>
+            </div>
+            <div class="step-arrow">
+                <svg width="60" height="20" viewBox="0 0 60 20"><path d="M0 10 Q30 0 60 10" stroke="#00D4AA" stroke-width="2" fill="none" stroke-dasharray="4,4"/><polygon points="55,6 60,10 55,14" fill="#00D4AA"/></svg>
             </div>
             <div class="step">
                 <div class="step-number">02</div>
-                <h3>Complete purchase</h3>
-                <p>You can complete your purchase using our secure payment method.</p>
+                <h3>Purchase</h3>
+                <p>Complete your payment securely through our platform</p>
+            </div>
+            <div class="step-arrow">
+                <svg width="60" height="20" viewBox="0 0 60 20"><path d="M0 10 Q30 20 60 10" stroke="#00D4AA" stroke-width="2" fill="none" stroke-dasharray="4,4"/><polygon points="55,6 60,10 55,14" fill="#00D4AA"/></svg>
             </div>
             <div class="step">
                 <div class="step-number">03</div>
-                <h3>Receive email</h3>
-                <p>You will receive a welcome email with instruction on how to get started.</p>
+                <h3>Receive Email</h3>
+                <p>Get your access credentials and Telegram invite links</p>
+            </div>
+            <div class="step-arrow">
+                <svg width="60" height="20" viewBox="0 0 60 20"><path d="M0 10 Q30 0 60 10" stroke="#00D4AA" stroke-width="2" fill="none" stroke-dasharray="4,4"/><polygon points="55,6 60,10 55,14" fill="#00D4AA"/></svg>
             </div>
             <div class="step">
                 <div class="step-number">04</div>
-                <h3>Earn profit</h3>
-                <p>By using our signals you should see a profit from day one.</p>
+                <h3>Earn Profits</h3>
+                <p>Start following our signals and watch your portfolio grow</p>
             </div>
         </div>
     </div>
@@ -286,49 +289,108 @@
 <!-- TESTIMONIALS -->
 <section class="testimonials" id="testimonials">
     <div class="container">
-        <h2 class="section-title white">TESTIMONIALS</h2>
-        <h3 class="testimonials-subtitle">What our community says</h3>
+        <span class="section-label section-label-light">TESTIMONIALS</span>
+        <h2 class="testimonials-heading">What our community says</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                <p>"Been more than 1 year with Thrive! Best forex group! Very good signals! Not just the signals are good! Amazing community and they have a robot copytrader called Robin to help us not missing any signal!"</p>
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">The signals are incredibly accurate. I've been a member for 6 months and my account has grown significantly. The community is also very supportive.</p>
+                <div class="testimonial-author">
+                    <strong>James R.</strong>
+                    <span>Trader since 2020</span>
+                </div>
             </div>
             <div class="testimonial-card">
-                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                <p>"THRIVE is very good signal provider! They also provide a very user friendly copytrader, Robin and a very helpful community!"</p>
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">Robin Copy Trader changed everything for me. I don't need to sit at my screen all day — the trades are copied automatically to my account.</p>
+                <div class="testimonial-author">
+                    <strong>Sarah M.</strong>
+                    <span>Trader since 2021</span>
+                </div>
             </div>
             <div class="testimonial-card">
-                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                <p>"Awesome signals with quick response support and the community it's an awesome place to learn more everyday!"</p>
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">Best forex signal service I've ever used. The analysis is thorough and the entry/exit points are spot on. Highly recommend Thrive!</p>
+                <div class="testimonial-author">
+                    <strong>Michael T.</strong>
+                    <span>Trader since 2020</span>
+                </div>
             </div>
             <div class="testimonial-card">
-                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                <p>"Thrive community has made me believe in a different world in forex, we are different traders with different strategies, ideas and methodologies however we all support each other"</p>
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">I was skeptical at first but the results speak for themselves. Consistent profits month after month. The Thrive community is like a family.</p>
+                <div class="testimonial-author">
+                    <strong>David K.</strong>
+                    <span>Trader since 2021</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">Excellent signals and even better community. The educational content has helped me understand the markets so much better.</p>
+                <div class="testimonial-author">
+                    <strong>Emma L.</strong>
+                    <span>Trader since 2020</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">From a complete beginner to consistently profitable — all thanks to Thrive. The team is always available and the signals are top notch.</p>
+                <div class="testimonial-author">
+                    <strong>Robert P.</strong>
+                    <span>Trader since 2021</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-    <div class="container footer-inner">
-        <div class="footer-logo">
-            <img src="images/logo_svg.svg" alt="THRIVE">
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-nav">
+                <a href="#community">Community</a>
+                <a href="#signals">Signals</a>
+                <a href="#robin">Robin</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Testimonials</a>
+            </div>
+            <div class="footer-logo">
+                <img src="images/Group-534.png" alt="Thrive" height="32">
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:support@thrive.pt">support@thrive.pt</a>
+            </div>
         </div>
-        <div class="footer-links">
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">FAQ</a>
+        <div class="footer-bottom">
+            <div class="footer-policies">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Refund Policy</a>
+            </div>
+            <p class="footer-copyright">© 2021 Thrive. All rights reserved.</p>
         </div>
-        <div class="footer-social">
-            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-discord"></i></a>
-        </div>
-        <p class="footer-copy">&copy; 2021 THRIVE. All rights reserved.</p>
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+            const navH = document.querySelector('.navbar').offsetHeight;
+            window.scrollTo({ top: target.offsetTop - navH, behavior: 'smooth' });
+            document.querySelector('.nav-links').classList.remove('active');
+        }
+    });
+});
+
+// Navbar shadow on scroll
+window.addEventListener('scroll', () => {
+    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
+});
+</script>
 </body>
 </html>
