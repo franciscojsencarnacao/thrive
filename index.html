@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THRIVE — Forex Signals Community & Trading Platform (2017-2019)</title>
+    <meta name="description" content="THRIVE was a forex signals community and trading platform based in Portugal, active from 2017 to 2019. This is an archived version of the site.">
+    <link rel="icon" href="images/greenlogo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00D077;
+            --secondary: #F3386A;
+            --dark: #111111;
+            --text: #222222;
+            --light: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        /* Archive Banner */
+        .archive-banner {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .archive-banner span { color: var(--primary); font-weight: 700; }
+
+        /* Nav */
+        nav {
+            background: rgba(0,0,0,0.95);
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        nav img { height: 32px; }
+        nav ul { list-style: none; display: flex; gap: 28px; }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover { color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #000 0%, #1a1a2e 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(0,208,119,0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 50%, rgba(243,56,106,0.06) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite alternate;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .hero-content img { height: 60px; margin-bottom: 30px; }
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 64px);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        .hero h1 .green { color: var(--primary); }
+        .hero h1 .pink { color: var(--secondary); }
+        .hero p {
+            color: #ffffffb3;
+            font-size: 16px;
+            font-weight: 500;
+            max-width: 560px;
+            margin: 0 auto 40px;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .stat { text-align: center; }
+        .stat-value {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 13px;
+            color: #ffffffa0;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* Section */
+        section { padding: 100px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .section-heading {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .section-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* About */
+        .about { background: #fff; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 40px; }
+        .about-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            border-bottom: 4px solid var(--primary);
+            transition: transform 0.2s;
+        }
+        .about-card:hover { transform: translateY(-2px); }
+        .about-card img { width: 36px; height: 36px; }
+        .about-card .card-text .big { font-size: 24px; font-weight: 800; color: var(--primary); }
+        .about-card .card-text .label { font-size: 14px; font-weight: 500; color: #555; }
+        .about-image img { width: 100%; border-radius: 16px; }
+
+        /* Forex Signals */
+        #forex-signals {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+            text-align: center;
+        }
+        .forex-hero-title {
+            font-size: clamp(36px, 5vw, 60px);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .forex-subtitle {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .forex-rotating {
+            display: inline-block;
+            background: var(--dark);
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        .forex-desc {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            max-width: 700px;
+            margin: 20px auto 40px;
+        }
+        .forex-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .forex-stat {
+            text-align: center;
+            padding: 0 20px;
+        }
+        .forex-stat:not(:last-child) {
+            border-right: 2px solid #6b646480;
+        }
+        .forex-stat .value { font-size: 40px; font-weight: 800; }
+        .forex-stat .label { font-size: 18px; font-weight: 600; }
+        .forex-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .forex-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .forex-feature .check { color: var(--dark); font-size: 18px; }
+
+        /* Signal Explanation */
+        .signal-explain { background: #fff; }
+        .signal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .signal-item {
+            display: flex;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .signal-item img { width: 50px; height: 50px; flex-shrink: 0; }
+        .signal-item h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .signal-item p { font-size: 12px; font-weight: 500; color: #666; line-height: 1.7; }
+
+        /* Robin */
+        #robin-details {
+            background: var(--dark);
+            color: #fff;
+        }
+        .robin-header { text-align: center; margin-bottom: 60px; }
+        .robin-header img { height: 80px; margin-bottom: 20px; }
+        .robin-header h2 { font-size: clamp(28px, 4vw, 55px); font-weight: 600; }
+        .robin-header p {
+            font-size: 14px;
+            font-weight: 500;
+            color: #ccc;
+            max-width: 600px;
+            margin: 16px auto 0;
+        }
+        .robin-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 16px;
+        }
+        .robin-feature {
+            background: #1a1a2e;
+            border-radius: 10px;
+            padding: 24px 20px;
+            transition: transform 0.2s;
+        }
+        .robin-feature:hover { transform: translateY(-3px); }
+        .robin-feature h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ebe4e4;
+            margin-bottom: 10px;
+        }
+        .robin-feature p {
+            font-size: 11px;
+            font-weight: 500;
+            color: #d0d0d0;
+            line-height: 1.7;
+        }
+
+        /* Pricing */
+        #pricing-cards {
+            background: linear-gradient(180deg, #fff 0%, #f8f9fa 100%);
+            text-align: center;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .pricing-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .pricing-card:hover { transform: translateY(-4px); }
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+        }
+        .pricing-card h3 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .pricing-card .price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #413f3f;
+            margin-bottom: 24px;
+        }
+        .pricing-card ul { list-style: none; margin-bottom: 30px; }
+        .pricing-card ul li {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pricing-card ul li .icon { color: var(--secondary); font-size: 16px; }
+        .pricing-card ul li .icon.no { color: #999; }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: default;
+        }
+        .btn-primary { background: var(--secondary); color: #fff; }
+        .btn-primary:hover { background: var(--primary); }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+
+        /* Community */
+        #thrive-community {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            text-align: center;
+        }
+        .community-desc {
+            font-size: 14px;
+            font-weight: 500;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .community-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .community-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .community-icon .circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(0,208,119,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+        .community-icon span { font-size: 13px; font-weight: 600; }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 40px 20px 20px;
+        }
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+        .footer-top img { height: 28px; }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .footer-links a {
+            color: #ffffffc0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--primary); }
+        .footer-social { display: flex; gap: 16px; }
+        .footer-social a {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .footer-social a:hover { background: var(--secondary); }
+        .footer-disclaimer {
+            max-width: 1100px;
+            margin: 0 auto;
+            font-size: 11px;
+            color: #ffffff9c;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .footer-bottom {
+            text-align: center;
+            font-size: 13px;
+            color: #ffffffc9;
+        }
+        .footer-bottom .green { color: var(--primary); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .about-grid, .signal-grid { grid-template-columns: 1fr; }
+            .stats-bar { gap: 30px; }
+            .forex-stat:not(:last-child) { border-right: none; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            section { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Archive Banner -->
+<div class="archive-banner">
+    ⚠️ This is an <span>archived version</span> of thrive.pt — the platform was active from 2017 to 2019 and is no longer operational.
+</div>
+
+<!-- Navigation -->
+<nav>
+    <img src="images/logo_svg.svg" alt="THRIVE">
+    <ul>
+        <li><a href="#forex-signals">Forex Signals</a></li>
+        <li><a href="#robin-details">Robin</a></li>
+        <li><a href="#pricing-cards">Pricing</a></li>
+        <li><a href="#thrive-community">Community</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <img src="images/logo_svg.svg" alt="THRIVE">
+        <h1>Your Consistent Path To <span class="green">SUCCESS</span></h1>
+        <p>THRIVE was created in 2019 with the aim of providing members of our community with an extra income with the least possible effort.</p>
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-value">600+</div>
+                <div class="stat-label">Community Members</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">85%</div>
+                <div class="stat-label">Accuracy Rate</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Signal Channels</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">1000+</div>
+                <div class="stat-label">Weekly PIPS</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div>
+                <div class="section-title">All About Thrive</div>
+                <div style="width: 60px; height: 4px; background: var(--primary); margin-bottom: 20px;"></div>
+                <p class="section-text">THRIVE was created in 2019 with the aim of providing members of our community with an extra income with the least possible effort. As owners and loyal customers of our own products, we constantly bet on the development of our platform. We treat all members of our community with respect and ethics, listening to each one closely, feedback from our community is one of the most important factors for the growth and development of THRIVE's products and services.</p>
+
+                <div class="about-cards">
+                    <div class="about-card">
+                        <img src="images/greenlogo.svg" alt="">
+                        <div class="card-text">
+                            <div class="label">Community with more than</div>
+                            <div class="big">600 members</div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <img src="images/greenlogo.svg" alt="">
+                        <div class="card-text">
+                            <div class="big">85%</div>
+                            <div class="label">of accuracy</div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <img src="images/greenlogo.svg" alt="">
+                        <div class="card-text">
+                            <div class="big">5 Forex signals</div>
+                            <div class="label">channels</div>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <img src="images/greenlogo.svg" alt="">
+                        <div class="card-text">
+                            <div class="big">> 1000</div>
+                            <div class="label">Weekly PIPS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div style="text-align: center; margin-top: 40px;">
+                    <div class="section-title" style="text-align: center;">Our Services</div>
+                    <p class="section-text" style="text-align: center; margin: 0 auto 30px;">We offer a number of benefits to trading on the global forex market – the largest and most liquid financial market in the world.</p>
+                    <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+                        <div style="font-size: 20px; font-weight: 500;">🤝 Community</div>
+                        <div style="font-size: 20px; font-weight: 500;">📊 Forex Signals</div>
+                        <div style="font-size: 20px; font-weight: 500;">🤖 Copy Trader (Robin)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Forex Signals -->
+<section id="forex-signals">
+    <div class="container">
+        <img src="images/greenlogo.svg" alt="" style="height: 40px; display: block; margin: 0 auto 16px;">
+        <div class="forex-hero-title">FOREX SIGNALS</div>
+        <div class="forex-subtitle">YOUR CONSISTENT PATH TO</div>
+        <div class="forex-rotating">SUCCESS</div>
+
+        <p class="forex-desc">Our analysis team save you hours of watching and waiting for possible entry and exit point, we deeply examine the market and share the best opportunities to profit daily through our signals.</p>
+
+        <div class="forex-stats">
+            <div class="forex-stat">
+                <div class="value">85%</div>
+                <div class="label">accuracy rate</div>
+            </div>
+            <div class="forex-stat">
+                <div class="value">5</div>
+                <div class="label">Forex Signals Channels on<br><strong style="font-size: 32px;">Telegram</strong></div>
+            </div>
+            <div class="forex-stat">
+                <div class="value">1000+</div>
+                <div class="label">Weekly PIPS</div>
+            </div>
+        </div>
+
+        <div class="forex-features">
+            <div class="forex-feature"><span class="check">✅</span> Professional analysis team</div>
+            <div class="forex-feature"><span class="check">✅</span> 24/7 Support</div>
+        </div>
+    </div>
+</section>
+
+<!-- Signal Explanation -->
+<section class="signal-explain">
+    <div class="container">
+        <div class="signal-grid">
+            <div>
+                <div class="signal-item">
+                    <div>
+                        <h4>📊 Pair</h4>
+                        <p>GBP/AUD – Refers to the currency pair that the Thrive signal relates to.</p>
+                    </div>
+                </div>
+                <div class="signal-item">
+                    <div>
+                        <h4>📈 Order</h4>
+                        <p>BUY – Details the market type of order.</p>
+                    </div>
+                </div>
+                <div class="signal-item">
+                    <div>
+                        <h4>🎯 Entry Price</h4>
+                        <p>1.7677 – It's the most effective entry point identified by our team.</p>
+                    </div>
+                </div>
+                <div class="signal-item">
+                    <div>
+                        <h4>🛑 Stop-Loss</h4>
+                        <p>1.7607 – The stop-loss price refers to the price in which the trade will be automatically closed at if the signal's prediction is incorrect, it ensures that your losses are always mitigated.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="signal-item">
+                    <div>
+                        <h4>💰 Take-Profit</h4>
+                        <p>1.7697 – Lets you know what price the trade should be closed at when a certain profit point is met.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; padding: 40px 0;">
+                    <img src="images/Component-31-–-1@2x-1024x795.jpg" alt="Signal example" style="max-width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Robin -->
+<section id="robin-details">
+    <div class="container">
+        <div class="robin-header">
+            <img src="images/ROBIN_LOGO_01-07.svg" alt="ROBIN">
+            <h2>Explore our Features</h2>
+            <p>Robin is a tool that automates trading in a simple and fast way, without human intervention. Robin reads the signals sent via Telegram and interprets them, sending the information to the trading platforms.</p>
+        </div>
+
+        <div class="robin-features">
+            <div class="robin-feature">
+                <h4>⚡ Immediate Execution</h4>
+                <p>Signals are executed from telegram channels in less than 5 seconds. ROBIN parses telegram channels and executes the signal directly to your MT4 account.</p>
+            </div>
+            <div class="robin-feature">
+                <h4>📊 Trade All Kinds Of Assets</h4>
+                <p>Trade FX, Indexes, Commodities. ROBIN parses also reply messages from telegram channels to execute directly close orders, move SL, set to breakeven… directly to your MT4.</p>
+            </div>
+            <div class="robin-feature">
+                <h4>🎯 Entry Price At Market Or Provider</h4>
+                <p>You can follow the entry price of your signal Provider, in this case, the EA will execute pending orders. Or simply execute forex signals directly at the Market price.</p>
+            </div>
+            <div class="robin-feature">
+                <h4>💰 Money Management</h4>
+                <p>You can set your money management from our EA settings. Choose a fixed lot or a percentage of the risk per trade. Our telegram forex copier to MT4 copies signals with multiple TPs.</p>
+            </div>
+            <div class="robin-feature">
+                <h4>📋 Signal Management</h4>
+                <p>You will be able to set your custom signal strategy, where you can set your trailing options, minimum and maximum SL, delta pips, etc.</p>
+            </div>
+            <div class="robin-feature">
+                <h4>🔄 Automatic Move of SL</h4>
+                <p>ROBIN contains several advanced options. When multiple TPs, it moves SL to breakeven when first TP hits, and continues to move SL to first TP when the second TP hits.</p>
+            </div>
+            <div class="robin-feature">
+                <h4>🧊 Symbol Exceptions</h4>
+                <p>You can choose to not trade a specific pair from telegram channels, or set a custom lot size for a pair.</p>
+            </div>
+            <div class="robin-feature">
+                <h4>📐 Percentage Of TPs Lot Size</h4>
+                <p>You can specify percentage of total lot size for each TPs to control your risk and maximize profit. The EA will split the total lot size depends of the parameters.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing-cards">
+    <div class="container">
+        <div class="section-title" style="text-align: center;">Choose Your Plan</div>
+        <div class="section-heading" style="text-align: center;">Pricing Plans</div>
+
+        <div class="pricing-grid">
+            <!-- Strive (Affiliate/Free) -->
+            <div class="pricing-card">
+                <h3>Strive Plan</h3>
+                <div class="price">€0.00 / month</div>
+                <ul>
+                    <li><span class="icon no">✕</span> Robin – Our copytrader</li>
+                    <li><span class="icon">✓</span> Telegram Forex signals</li>
+                    <li><span class="icon">✓</span> 5 Trading channels</li>
+                    <li><span class="icon">✓</span> Entry point, take profit & SL provided</li>
+                    <li><span class="icon">✓</span> Community with > 600 members</li>
+                    <li><span class="icon">✓</span> 85% Accuracy</li>
+                    <li><span class="icon">✓</span> >1000 weekly PIPS</li>
+                    <li><span class="icon">✓</span> Detailed weekly signals report</li>
+                    <li><span class="icon">✓</span> 24/7 Support</li>
+                </ul>
+                <span class="btn btn-outline">Affiliate Plan</span>
+            </div>
+
+            <!-- Strive + Robin -->
+            <div class="pricing-card featured">
+                <h3>Strive + Robin Plan</h3>
+                <div class="price">€0.00 / month</div>
+                <ul>
+                    <li><span class="icon">✓</span> Robin – Our copytrader</li>
+                    <li><span class="icon">✓</span> Telegram Forex signals</li>
+                    <li><span class="icon">✓</span> 5 Trading channels</li>
+                    <li><span class="icon">✓</span> Entry point, take profit & SL provided</li>
+                    <li><span class="icon">✓</span> Community with > 600 members</li>
+                    <li><span class="icon">✓</span> 85% Accuracy</li>
+                    <li><span class="icon">✓</span> >1000 weekly PIPS</li>
+                    <li><span class="icon">✓</span> Detailed weekly signals report</li>
+                    <li><span class="icon">✓</span> 24/7 Support</li>
+                </ul>
+                <span class="btn btn-primary">Most Popular</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community -->
+<section id="thrive-community">
+    <div class="container">
+        <div class="section-title" style="color: var(--primary);">Thrive Community</div>
+        <div class="section-heading" style="color: #fff;">Join 600+ Traders Worldwide</div>
+        <p class="community-desc">We treat all members of our community with respect and ethics, listening to each one closely. Feedback from our community is one of the most important factors for the growth and development of THRIVE's products and services.</p>
+
+        <div class="community-icons">
+            <div class="community-icon">
+                <div class="circle">💬</div>
+                <span>Telegram</span>
+            </div>
+            <div class="community-icon">
+                <div class="circle">🎮</div>
+                <span>Discord</span>
+            </div>
+            <div class="community-icon">
+                <div class="circle">📘</div>
+                <span>Facebook</span>
+            </div>
+            <div class="community-icon">
+                <div class="circle">📸</div>
+                <span>Instagram</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-top">
+        <img src="images/logo_svg.svg" alt="THRIVE">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Robin</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Risk Disclosure</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/thrive.pt/" title="Instagram">📸</a>
+            <a href="https://t.me/thrive_welcome_bot" title="Telegram">✈️</a>
+            <a href="https://discord.com/invite/rQGyZEh" title="Discord">🎮</a>
+        </div>
+    </div>
+
+    <div class="footer-disclaimer">
+        <strong>Risk warning:</strong> CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. Between 74-89% of retail investor accounts lose money when trading CFDs. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.<br><br>
+        <strong>Disclaimer:</strong> Signals are no guarantee of any profits or wins and using signals is on the client's own risk. The information provided is not intended as, and shall not be understood or constructed as, financial advice.
+    </div>
+
+    <div class="footer-bottom">
+        Copyrights © 2020 All Rights Reserved by <span class="green">Thrive</span> · support@thrive.pt
+    </div>
+</footer>
+
+</body>
+</html>
